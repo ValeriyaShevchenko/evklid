@@ -70,6 +70,14 @@ body {
   margin: 0 auto;
 }
 
+.section__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 59px;
+  color: var(--color-000);
+}
+
 /* header */
 
 .header {
@@ -170,12 +178,7 @@ body {
 }
 
 .about-us__title {
-  margin: 0;
   margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 59px;
-  color: var(--color-000);
 }
 
 .about-us__descr {
@@ -244,6 +247,7 @@ body {
   margin-bottom: 0;
   padding: 0;
   border: none;
+  border-radius: 32px;
   background-image: url(../image/about-us__item_big.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -276,6 +280,95 @@ body {
   color: #FFFFFF;
   align-self: center;
 }
+
+/* stages */
+
+.stages__section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.stages__title {
+  margin-bottom: 50px;
+}
+
+.stages__list {
+  display: flex;
+  margin-bottom: 46px;
+}
+
+.stages__item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--color-000);
+}
+
+.stages__item:not(:last-child) {
+  margin-right: 86px;
+}
+
+.stages__item_active {
+  color: var(--color-e1670e);
+}
+
+.stages__wrapper {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../image/stages__wrapper-bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 870px 460px;
+}
+
+.stages__subtitle {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--color-000);
+}
+
+.stages__descr_gap {
+  margin-bottom: 18px;
+}
+
+.stages__descr {
+  margin: 0;
+  max-width: 758px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--color-000);
+}
+
+.stages__button {
+  padding: 19px 37px;
+  border-radius: 16px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.stages__button:first-child {
+  margin-right: 29px;
+}
+
+.stages__button_bg {
+  font-weight: 700;
+  color: var(--color-fff);
+  background-color: var(--color-ff9900);
+}
+
+.stages__button_border {
+  border: 1px solid var(--color-000);
+  font-weight: 400;
+  color: var(--color-000);
+}
+
+
+
+
 
 
 
