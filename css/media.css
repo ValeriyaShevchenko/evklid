@@ -258,6 +258,10 @@
     line-height: 32px;
   }
 
+  .accordion__text {
+    max-width: 80%;
+  }
+
   .footer__logo {
     width: 224px;
   }
@@ -665,6 +669,10 @@
   .faq__btn svg {
     width: 30px;
     height: 30px;
+  }
+
+  .accordion__text {
+    max-width: 95%;
   }
 
   .footer {

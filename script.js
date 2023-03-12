@@ -39,6 +39,29 @@ menuLinks.forEach(function(el) {
   })
 });
 
+//accordion
+
+let accordions = document.querySelectorAll('.accordion');
+
+accordions.forEach(el => {
+  el.addEventListener('click', (e) => {
+    let self = e.currentTarget;
+    let control = self.querySelector('.accordion__control');
+    let content = self.querySelector('.accordion__content');
+
+    self.classList.toggle('accordion--open');
+
+    if (self.classList.contains('accordion--open')) {
+      control.setAttribute('aria-expanded', true);
+      control.setAttribute('aria-hidden', false);
+      content.style.maxHeight = content.scrollHeight + 'px';
+    } else {
+      control.setAttribute('aria-expanded', false);
+      control.setAttribute('aria-hidden', true);
+      content.style.maxHeight = null;
+    }
+  });
+});
 
 
 

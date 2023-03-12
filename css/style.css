@@ -652,6 +652,42 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
+.accordion__content {
+  box-sizing: content-box;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all 0.3s ease-out;
+}
+
+.accordion__text {
+  margin: 0;
+  max-width: 58%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--color-000);
+}
+
+.accordion__text:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.accordion--open .faq__btn svg {
+  transform: rotate(45deg);
+}
+
+.accordion--open .accordion__content {
+  opacity: 1;
+  padding-bottom: 40px;
+}
+
+.accordion--open .faq__btn {
+  border-bottom: none;
+}
+
+
 /* footer */
 
 .footer {
