@@ -39,6 +39,42 @@ menuLinks.forEach(function(el) {
   })
 });
 
+//swiper
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  a11y: {
+    paginationBulletMessage: 'Тут название слайда {{index}}',
+  }
+});
+
+//stages
+
+let stagesBtn = document.querySelectorAll('.stages__btn');
+let stagesItem = document.querySelectorAll('.stages__wrapper');
+
+stagesBtn.forEach(function(element) {
+  element.addEventListener('click', function(e){
+    let path = e.currentTarget.dataset.path;
+
+    stagesBtn.forEach(function(btn) {
+      btn.classList.remove('stages__btn--active')
+    });
+
+    e.currentTarget.classList.add('stages__btn--active');
+
+    stagesItem.forEach(function(element) {
+      element.classList.remove('stages__wrapper--active')
+    });
+
+    document.querySelector(`[data-target="${path}"]`).classList.add('stages__wrapper--active');
+  });
+});
+
 //accordion
 
 let accordions = document.querySelectorAll('.accordion');

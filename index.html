@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/media.css">
   <link rel="shortcut icon" href="./image/favicon.svg" type="image/svg+xml">
@@ -63,15 +64,26 @@
     <section class="hero">
       <div class="container">
         <div class="hero__wrapper">
-          <h1 class="hero__title">
-            Проектные решения любой сложности
-          </h1>
-          <p class="hero__subtitle">
-            Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом проектантов
-          </p>
-          <button class="hero__button btn-reset">
-            Заказать расчёт
-          </button>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide--bg1"></div>
+              <div class="swiper-slide swiper-slide--bg2"></div>
+              <div class="swiper-slide swiper-slide--bg3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Проектные решения любой сложности
+            </h1>
+            <p class="hero__subtitle">
+              Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом проектантов
+            </p>
+            <button class="hero__button btn-reset">
+              Заказать расчёт
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -122,19 +134,19 @@
         </h2>
         <ul class="stages__list list-reset">
           <li class="stages__item">
-            <button class="stages__btn btn-reset">1&nbsp;шаг</button>
+            <button class="stages__btn btn-reset stages__btn--active" data-path="stage_1">1&nbsp;шаг</button>
           </li>
           <li class="stages__item">
-            <button class="stages__btn btn-reset">2&nbsp;шаг</button>
+            <button class="stages__btn btn-reset" data-path="stage_2">2&nbsp;шаг</button>
           </li>
           <li class="stages__item">
-            <button class="stages__btn btn-reset">3&nbsp;шаг</button>
+            <button class="stages__btn btn-reset" data-path="stage_3">3&nbsp;шаг</button>
           </li>
           <li class="stages__item">
-            <button class="stages__btn btn-reset">4&nbsp;шаг</button>
+            <button class="stages__btn btn-reset" data-path="stage_4">4&nbsp;шаг</button>
           </li>
         </ul>
-        <div class="stages__wrapper">
+        <div class="stages__wrapper stages__wrapper--active" data-target="stage_1">
           <div class="stages__content">
             <h3 class="stages__subtitle">
               Проводим консультацию
@@ -153,12 +165,76 @@
             </div>
           </div>
           <picture class="stages__img">
-            <!-- <source srcset="./image/stages__wrapper-bg.jpg"> -->
             <source srcset="./image/stages-img1-320.jpg" media="(max-width: 600px)">
             <source srcset="./image/stages-img1-768.jpg" media="(max-width: 992px)">
             <source srcset="./image/stages-img1-1024.jpg" media="(max-width: 1200px)">
-
             <img src="./image/stages__wrapper-bg.jpg" alt="Stage image">
+          </picture>
+        </div>
+        <div class="stages__wrapper" data-target="stage_2">
+          <div class="stages__content">
+            <h3 class="stages__subtitle">
+              Составляем смету
+            </h3>
+            <div class="stages__text">
+              <p class="stages__descr">
+                Внедрения и&nbsp;модернизации приоритизации разума над эмоциями. В&nbsp;рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А&nbsp;также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с&nbsp;зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.
+              </p>
+            </div>
+            <div class="stages__buttons">
+              <button class="stages__button stages__button_bg btn-reset">Подробнее</button>
+              <a class="stages__button stages__button_border" href="#" download >Договор</a>
+            </div>
+          </div>
+          <picture class="stages__img">
+            <source srcset="./image/stages-img2-320.jpg" media="(max-width: 600px)">
+            <source srcset="./image/stages-img2-768.jpg" media="(max-width: 992px)">
+            <source srcset="./image/stages-img2-1024.jpg" media="(max-width: 1200px)">
+            <img src="./image/stages-img2-1920.jpg" alt="Stage image">
+          </picture>
+        </div>
+        <div class="stages__wrapper" data-target="stage_3">
+          <div class="stages__content">
+            <h3 class="stages__subtitle">
+              Привлекаем подрядчиков
+            </h3>
+            <div class="stages__text">
+              <p class="stages__descr">
+                Идейные соображения высшего порядка, а&nbsp;также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от&nbsp;дальнейших направлений развития. Разнообразный и&nbsp;богатый опыт говорит нам, что новая модель организационной деятельности говорит о&nbsp;возможностях системы массового участия. Принимая во&nbsp;внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по&nbsp;разработке прогресса профессионального сообщества.
+              </p>
+            </div>
+            <div class="stages__buttons">
+              <button class="stages__button stages__button_bg btn-reset">Подробнее</button>
+              <a class="stages__button stages__button_border" href="#" download >Договор</a>
+            </div>
+          </div>
+          <picture class="stages__img">
+            <source srcset="./image/stages-img3-320.jpg" media="(max-width: 600px)">
+            <source srcset="./image/stages-img3-768.jpg" media="(max-width: 992px)">
+            <source srcset="./image/stages-img3-1024.jpg" media="(max-width: 1200px)">
+            <img src="./image/stages-img3-1920.jpg" alt="Stage image">
+          </picture>
+        </div>
+        <div class="stages__wrapper" data-target="stage_4">
+          <div class="stages__content">
+            <h3 class="stages__subtitle">
+              Инспектируем все этапы работ
+            </h3>
+            <div class="stages__text">
+              <p class="stages__descr">
+                Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от&nbsp;дальнейших направлений развития. Разнообразный и&nbsp;богатый опыт говорит нам, что новая модель организационной деятельности говорит о&nbsp;возможностях системы массового участия. Принимая во&nbsp;внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
+              </p>
+            </div>
+            <div class="stages__buttons">
+              <button class="stages__button stages__button_bg btn-reset">Подробнее</button>
+              <a class="stages__button stages__button_border" href="#" download >Договор</a>
+            </div>
+          </div>
+          <picture class="stages__img">
+            <source srcset="./image/stages-img4-320.jpg" media="(max-width: 600px)">
+            <source srcset="./image/stages-img4-768.jpg" media="(max-width: 992px)">
+            <source srcset="./image/stages-img4-1024.jpg" media="(max-width: 1200px)">
+            <img src="./image/stages-img4-1920.jpg" alt="Stage image">
           </picture>
         </div>
       </div>
@@ -344,6 +420,9 @@
     </div>
 
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./script.js"></script>
+
 </body>
 </html>

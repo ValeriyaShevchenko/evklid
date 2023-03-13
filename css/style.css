@@ -229,6 +229,7 @@ body {
 .search__close:hover:not(:focus-visible) svg rect {
   fill: var(--color-ff9900);
 }
+
 .search__close:hover:not(:focus-visible) svg circle {
   stroke: var(--color-ff9900);
 }
@@ -254,13 +255,62 @@ body {
 }
 
 .hero__wrapper {
+  position: relative;
   padding: 100px 80px;
   border-radius: 32px;
+  overflow: hidden;
+}
+
+.swiper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
   background-color: #93c9e9;
-  background-image: url('../image/hero-bg1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+.swiper-slide--bg1 {
+  background-image: url('../image/hero-bg1.jpg');
+}
+
+.swiper-slide--bg2 {
+  background-image: url('../image/hero-bg2-1920.jpg');
+}
+
+.swiper-slide--bg3 {
+  background-image: url('../image/hero-bg3-1920.jpg');
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-cacaca);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-fff);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 10px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 27px;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 100;
+  pointer-events: none;
 }
 
 .hero__title {
@@ -292,6 +342,7 @@ body {
   color: var(--color-fff);
   background-color: var(--color-ff9900);
   transition: background-color 0.3s ease-in-out;
+  pointer-events: all;
 }
 
 .hero__button:focus-visible {
@@ -432,7 +483,6 @@ body {
   background-color: var(--color-e1670e);
 }
 
-
 /* stages */
 
 .stages {
@@ -457,6 +507,10 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
+.stages__btn--active {
+  color: var(--color-e1670e);
+}
+
 .stages__btn:focus-visible {
   outline: 2px solid var(--color-ff9900);
   outline-offset: 5px;
@@ -475,6 +529,10 @@ body {
 }
 
 .stages__wrapper {
+  display: none;
+}
+
+.stages__wrapper--active {
   display: flex;
   justify-content: space-between;
 }
@@ -636,6 +694,7 @@ body {
 .faq__btn:active:not(:focus-visible) svg {
   transform: rotate(45deg);
 }
+
 .faq__btn svg {
   transition: transform .3s ease-in-out;
 }
@@ -686,7 +745,6 @@ body {
 .accordion--open .faq__btn {
   border-bottom: none;
 }
-
 
 /* footer */
 
