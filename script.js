@@ -48,7 +48,7 @@ const swiper = new Swiper('.swiper', {
     clickable: true
   },
   a11y: {
-    paginationBulletMessage: 'Тут название слайда {{index}}',
+    paginationBulletMessage: 'Слайд {{index}}',
   }
 });
 
@@ -89,11 +89,11 @@ accordions.forEach(el => {
 
     if (self.classList.contains('accordion--open')) {
       control.setAttribute('aria-expanded', true);
-      control.setAttribute('aria-hidden', false);
+      content.setAttribute('aria-hidden', false);
       content.style.maxHeight = content.scrollHeight + 'px';
     } else {
       control.setAttribute('aria-expanded', false);
-      control.setAttribute('aria-hidden', true);
+      content.setAttribute('aria-hidden', true);
       content.style.maxHeight = null;
     }
   });

@@ -88,6 +88,11 @@ body {
   margin-right: auto;
 }
 
+.header__logo:focus-visible {
+  outline: 2px solid var(--color-ff9900);
+  outline-offset: 5px;
+}
+
 .header__nav {
   margin-right: 260px;
 }
@@ -767,6 +772,11 @@ body {
 
 .footer__logo {
   margin-bottom: 16px;
+}
+
+.footer__logo:focus-visible {
+  outline: 2px solid var(--color-ff9900);
+  outline-offset: 5px;
 }
 
 .footer__list {
