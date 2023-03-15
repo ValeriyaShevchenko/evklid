@@ -320,6 +320,9 @@
 
   .hero__wrapper {
     padding: 160px 40px;
+  }
+
+  .swiper {
     border-radius: 24px;
   }
 
@@ -516,6 +519,9 @@
 
   .hero__wrapper {
     padding: 60px 22px;
+  }
+
+  .swiper {
     border-radius: 16px;
   }
 
