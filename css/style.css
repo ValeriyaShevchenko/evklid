@@ -300,6 +300,10 @@ body {
   opacity: 1;
 }
 
+.swiper-pagination-bullet:focus-visible {
+  outline: 2px solid var(--color-ff9900);
+}
+
 .swiper-pagination-bullet-active {
   background-color: var(--color-fff);
 }
@@ -813,6 +817,7 @@ body {
 }
 
 .social__link {
+  display: inline-block;
   width: 60px;
   height: 60px;
 }
